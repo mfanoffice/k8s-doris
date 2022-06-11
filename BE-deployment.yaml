@@ -14,7 +14,7 @@ spec:
       labels:
         app: doris-be
     spec:
-      nodeName: fanym-master-1
+      #nodeName: fanym-master-1
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:

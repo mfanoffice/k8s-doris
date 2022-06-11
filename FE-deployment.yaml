@@ -17,7 +17,7 @@ spec:
     spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
-      nodeName: fanym-worker-1
+      #nodeName: fanym-worker-1
       containers:
         - name: doris-fe
           env:
