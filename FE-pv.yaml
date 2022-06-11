@@ -1,0 +1,25 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-doris-fe
+  namespace: default
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+  storageClassName: master-nfs
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-doris-be
+  namespace: default
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+  storageClassName: master-nfs
