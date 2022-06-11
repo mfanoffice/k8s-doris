@@ -11,8 +11,8 @@ ENV JAVA_HOME /usr/local/jdk1.8.0_311
 ENV JRE_HOME $JAVA_HOME/jre
 ENV CLASSPATH $JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib:$CLASSPATH
 ENV PATH $JAVA_HOME/bin:$PATH
+#编译doris-fe镜像时 DORIS_HOME /opt/doris/fe
 ENV DORIS_HOME /opt/doris/be
-# Install tools
 
 RUN yum install -y telnet curl net-tools && \
 yum clean all && \
@@ -23,5 +23,4 @@ mv apache-doris-1.0.0-incubating-bin/ doris/ && \
 echo 'priority_networks = ${FE_IPADDRESS}/24' >> doris/fe/conf/fe.conf && \
 echo 'priority_networks = ${BE_IPADDRESS}/24' >> doris/be/conf/be.conf
 
-# Define default command.
 CMD ["tail -f /dev/null"]
