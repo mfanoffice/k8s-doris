@@ -12,8 +12,7 @@
 创建完PVC就可以直接部署FE、BE
 
 ```shell
-kubectl apply -f FE-pvc.yaml
-kubectl apply -f BE-pvc.yaml 
+kubectl apply -f doris-pvc.yaml
 ```
 ```shell
 kubectl apply -f FE-deployment.yaml
